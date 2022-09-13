@@ -4,6 +4,29 @@ const modal = document.getElementById('modal');
 const closeBtn = document.querySelector("#close");
 const beginGameBtn = document.getElementById('beginGame');
 
+
+//Questions array
+const questions = [];
+
+
+
+//Functions
+const openModal = () => {
+    modal.style.display = 'block';
+};
+
+const closeModal = () => {
+    modal.style.display = 'none';
+  };
+
+  
+  function getRandomItem(arr) {
+    const randomIndex = Math.floor(Math.random() * arr.length);
+    const question = arr[randomIndex];
+    return question.prompt;
+}
+
+
 //Objects
 const questions100 = [
     {
@@ -20,29 +43,11 @@ const questions100 = [
     }
 ]
 
-
-
-//Questions array
-const questions = [];
+console.log(getRandomItem(questions100));
 
 
 
-//Functions
-const openModal = () => {
-    modal.style.display = 'block';
-};
 
-const closeModal = () => {
-    modal.style.display = 'none';
-  };
-
-  const randomQ100 = () => {
-    return questions100[Math.floor(Math.random()*questions100.length)];
-  };
-
-console.log(randomQ100);
-
-randomQ100();
 //Event Listeners
 getStarted.addEventListener('click', openModal);
 closeBtn.addEventListener("click", closeModal);
