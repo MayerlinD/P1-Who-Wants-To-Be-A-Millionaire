@@ -22,6 +22,9 @@ const questions100 = [
 
 
 
+//Questions array
+const questions = [];
+
 
 
 //Functions
@@ -33,6 +36,13 @@ const closeModal = () => {
     modal.style.display = 'none';
   };
 
+  const randomQ100 = () => {
+    return questions100[Math.floor(Math.random()*questions100.length)];
+  };
+
+console.log(randomQ100);
+
+randomQ100();
 //Event Listeners
 getStarted.addEventListener('click', openModal);
 closeBtn.addEventListener("click", closeModal);
