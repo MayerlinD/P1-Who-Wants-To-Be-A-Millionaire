@@ -70,6 +70,45 @@ body {
   #beginGame {
     position: absolute;
     margin-left: 460px;
-    bottom: 185px;
+    bottom: 150px;
   }
+
+  #main-game-container {
+    visibility: hidden;
+  }
+
+  #level {
+    align-items: flex-start;
+
+  }
+
+  ol {
+    list-style: none;
+    display: flex;
+    flex-direction: column-reverse;
+    position: absolute;
+    left: 1200px;
+    background-color: n;
+    color: orange;
+    font-size: 20px;
+    font-family: 'Yeseva One', cursive;
+
+  }
+
+  li {
+    flex: 0 0 auto;
+    counter-increment: item;
+    margin-bottom: 5px;
+  }
+
+  li:before {
+    margin-right: 10px;
+    content: counter(item);
+    color: white;
+    width: 1.2em;
+    text-align: center;
+    display: inline-block;
+  }
+
+  
 

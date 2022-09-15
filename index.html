@@ -7,6 +7,9 @@
     <title>Who Wants to Be a Millionaire?</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="app.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+    </style>
 </head>
 <body>
     <div id="container">
@@ -25,7 +28,39 @@
                 </div>
             </div>
         </div>
-        <div id="bottom-row"></div>
+        <div id="main-game-container">
+            <div id="level">
+                <ol>
+                    <li>100</li>
+                    <li>200</li>
+                    <li>300</li>
+                    <li>500</li>
+                    <li>1 000</li>
+                    <li>2 000</li>
+                    <li>4 000</li>
+                    <li>8 000</li>
+                    <li>16 000</li>
+                    <li>32 000</li>
+                    <li>64 000</li>
+                    <li>125 000</li>
+                    <li>250 000</li>
+                    <li>500 000</li>
+                    <li>1 000 000</li>
+                </ol>
+            </div>
+            <div id="life-lines">
+                <button>50/50</button>
+                <button img src="https://png.pngtree.com/png-clipart/20210216/ourmid/pngtree-phone-icon-in-circle-black-png-image_5994540.png"></button>
+            </div>
+            <div>
+                <h1 class="prompt"></h1>
+                <button class="a"></button>
+                <button class="b"></button>
+                <button class="c"></button>
+                <button class="d"></button>
+                <div class="display"></div>
+              </div>
+        </div>
     </div>
     <audio id="lets-play" src="https://millionaire-school.netlify.com/sounds/lets_play.mp3"></audio>
 	<audio id="easy" src="https://millionaire-school.netlify.com/sounds/easy.mp3"></audio>
