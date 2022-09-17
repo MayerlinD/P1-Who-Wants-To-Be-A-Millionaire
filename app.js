@@ -14,12 +14,22 @@ const displayEl = document.querySelector('.display');
 const buttonA = document.querySelector('button.a');
 const buttonB = document.querySelector('button.b');
 const buttonC = document.querySelector('button.c');
-const buttonD = document.querySelector('button.d')
+const buttonD = document.querySelector('button.d');
+const countDownClock = document.querySelector(".timer");
+const levelsWon =document.querySelectorAll('.money-won');
+
+let level = -1;
 
 //Questions array
 const questions = [];
 
+let currentAns = null
+
+let currentQuestion = questions.shift()
+
+
 let timeoutId;
+let intervalId;
 
 //Functions
 const openModal = () => {
@@ -34,31 +44,86 @@ const closeModal = () => {
   function getRandomItem(arr) {
     const randomIndex = Math.floor(Math.random() * arr.length);
     const question = arr[randomIndex];
-    questions.push(question.prompt);
+    questions.push(question);
 };
 
-// const startTimerMusic = () => {
-// 	// start audio
-// 	letsPlayAudio.play();
-// 	letsPlayAudio.volume = 0.3;
-// 	timeoutId = setTimeout(() => {
-// 		thinkingAudio.play();
-// 		thinkingAudio.volume = 0.3;
-// 	}, 4000); 
-// };
+const getNextQuestion = () => { 
+    currentQuestion = questions.shift()
+    promptDisplay.innerHTML = currentQuestion.prompt
+    buttonA.innerHTML = currentQuestion.a;
+    buttonB.innerHTML = currentQuestion.b;
+    buttonC.innerHTML = currentQuestion.c;
+    buttonD.innerHTML = currentQuestion.d;
+    timeoutId = setTimeout(() => {
+		thinkingAudio.play();
+		thinkingAudio.volume = 0.3;
+	}, 4000);
+};
+
+const checkWin = (ans, ques) => {
+    if (ans === ques.answer) {
+      stopTimerMusic();
+	  correctAnswerAudio.play();
+	  correctAnswerAudio.volume = 0.3;
+      getNextQuestion();
+      level++;
+      levelsWon[level].classList.add('highlight');
+    } else {
+      gameOver();
+    }
+};
+  
+
+const startTimerMusic = () => {
+	// start audio
+	letsPlayAudio.play();
+	letsPlayAudio.volume = 0.3;
+	timeoutId = setTimeout(() => {
+		thinkingAudio.play();
+		thinkingAudio.volume = 0.3;
+	}, 4000); 
+};
 
 const openGame = () => {
     mainGame.style.visibility = 'visible';
     levelEl.style.visibility = 'visible';
     modal.style.display = 'none';
     getStarted.style.display = 'none';
-    letsPlayAudio.play();
-	letsPlayAudio.volume = 0.3;
-	timeoutId = setTimeout(() => {
-		thinkingAudio.play();
-		thinkingAudio.volume = 0.3;
-	}, 4000); 
+    startTimerMusic();
+};
+
+const stopTimerMusic = () => {
+	clearTimeout(timeoutId);
+	clearInterval(intervalId);
+	letsPlayAudio.pause();
+	letsPlayAudio.currentTime = 0;
+	thinkingAudio.pause();
+	thinkingAudio.currentTime = 0;
+	wrongAnswerAudio.pause();
+	wrongAnswerAudio.currentTime = 0;
+	correctAnswerAudio.pause();
+	correctAnswerAudio.currentTime = 0;
+};
+
+const gameOver = () => {
+    stopTimerMusic();
+    wrongAnswerAudio.play();
+	wrongAnswerAudio.volume = 0.3;
+    setTimeout(location.reload.bind(location), 4000);
 }
+
+    // function timer(){
+    //     var sec = 15;
+    //     var timer = setInterval(function(){
+    //         countDownClock.innerHTML='00:'+sec;
+    //         sec--;
+    //         if (sec === 0) {
+    //             clearInterval(timer);
+    //             gameOver();
+    //         }
+    //     }, 1000);
+    // }
+
 
 
 //Objects
@@ -199,23 +264,248 @@ const questions1000 = [
     }
 ]
 
-const questions2000 = []
+const questions2000 = [
+    {
+        prompt: 'What colour were the Pyramids of Giza originally?',
+        a: 'white',
+        b: 'brown',
+        c: 'orange',
+        d: 'gold',
+        answer: 'a'
+    },
+    {
+        prompt: 'According to Greek Mythology who was the first woman on Earth',
+        a: 'Hera',
+        b: 'Pandora',
+        c: 'Aphrodite',
+        d: 'Persephone',
+        answer: 'b'
+    },
+    {
+        prompt: 'Which country consumes the most chocolate per capita?',
+        a: 'USA',
+        b: 'Switzerland',
+        c: 'France',
+        d: 'Belgium',
+        answer: 'b'
+    }
+]
 
-const questions4000 = []
+const questions4000 = [
+    {
+        prompt: "Which two U.S. states don’t observe Daylight Savings Time?",
+        a: 'Alaska & Kentucky',
+        b: 'Florida & Michigan',
+        c: 'Alaska & Hawaii',
+        d: 'Arizona & Hawaii',
+        answer: 'd'
+    },
+    {
+        prompt: "About how many taste buds does the average human tongue have?",
+        a: '10,000',
+        b: '7,000',
+        c: '18,000',
+        d: '22,000',
+        answer: 'a'
+    },
+    {
+        prompt: 'Which country produces the most coffee in the world?',
+        a: 'Colombia',
+        b: 'Israel',
+        c: 'Brazil',
+        d: 'Italy',
+        answer: 'c'
+    }
+]
 
-const questions8000 = []
+const questions8000 = [
+    {
+        prompt: "Which Of Shakespeare’s Plays Is The Longest?",
+        a: 'Hamlet',
+        b: 'Macbeth',
+        c: 'Romeo & Juliet',
+        d: 'Othello',
+        answer: 'a'
+    },
+    {
+        prompt: 'Which mammal has no vocal cords?',
+        a: 'Bats',
+        b: 'Giraffes',
+        c: 'Kangaroos',
+        d: 'Otters',
+        answer: 'b'
+    },
+    {
+        prompt: 'What does M&M stand for?',
+        a: 'Mary & Mark',
+        b: 'Mifflin & Mars',
+        c: 'Mars & Murrie',
+        d: 'Maddy & May',
+        answer: 'c'
+    }
+]
 
-const questions15000 = []
+const questions15000 = [
+    {
+        prompt: 'Who was the shortest player ever to play in the NBA?',
+        a: 'Tyrone Bogues',
+        b: 'Keith Jennings',
+        c: 'Spud Webb',
+        d: 'Mel Hirsch',
+        answer: 'a'
+    },
+    {
+        prompt: 'Approximately, how many grapes are needed for only one bottle of wine?',
+        a: '400',
+        b: '1200',
+        c: '2,000',
+        d: '700',
+        answer: 'd'
+    },
+    {
+        prompt: 'Where on the human body is the Zygomatic bone found?',
+        a: 'Calf',
+        b: 'Cheek',
+        c: 'Ankle',
+        d: 'Hip',
+        answer: 'b'
+    }
+]
 
-const questions32000 = []
+const questions32000 = [
+    {
+        prompt: 'How many bricks is the Empire State Building made of?',
+        a: '10 million',
+        b: '14 million',
+        c: '5 million',
+        d: '18 million',
+        answer: 'a'
+    },
+    {
+        prompt: "Which singer’s real name is Stefani Joanne Angelina Germanotta?",
+        a: 'Madonna',
+        b: 'Nicki Minaj',
+        c: 'Lady Gaga',
+        d: 'Fergie',
+        answer: 'c'
+    },
+    {
+        prompt: 'What is the loudest animal on Earth?',
+        a: 'African elephant',
+        b: 'Sperm whale',
+        c: 'Lion',
+        d: 'Humpback whale',
+        answer: 'b'
+    }
+]
 
-const questions64000 = []
+const questions64000 = [
+    {
+        prompt: 'What is the national animal of Scotland?',
+        a: 'Puffin',
+        b: 'Loch Ness Monster',
+        c: 'Sheep',
+        d: 'Unicorn',
+        answer: 'd'
+    },
+    {
+        prompt: "Who is People Magazine’s Sexiest Man Alive in 1989?",
+        a: 'Richard Gere',
+        b: 'Sean Connery',
+        c: 'Tom Cruise',
+        d: 'Liam Neeson',
+        answer: 'b'
+    },
+    {
+        prompt: 'What was the first toy to be advertised on television?',
+        a: 'Mr. Potato Head',
+        b: 'yo-yo',
+        c: 'slinky',
+        d: 'Barbie',
+        answer: 'a'
+    }
+]
 
-const questions125000 = []
+const questions125000 = [
+    {
+        prompt: 'The fear of number 13 is called what?',
+        a: 'Triskaidekaphobia',
+        b: 'Bathmophobia',
+        c: 'Chronomentrophobia',
+        d: 'Verminophobia',
+        answer: 'a'
+    },
+    {
+        prompt: 'Which continent has hosted The Olympics the most times?',
+        a: 'North America',
+        b: 'Europe',
+        c: 'Africa',
+        d: 'Asia',
+        answer: 'b'
+    },
+    {
+        prompt: "What is the world’s most venomous fish?",
+        a: 'Puffer fish',
+        b: 'Tigerfish',
+        c: 'Stonefish',
+        d: 'Red Lionfish',
+        answer: 'c'
+    }
+]
 
-const questions250000 = []
+const questions250000 = [
+    {
+        prompt: 'In the human body, what is the Hallux?',
+        a: 'Thumb',
+        b: 'Elbow',
+        c: 'Big Toe',
+        d: 'Knuckle',
+        answer: 'c'
+    },
+    {
+        prompt: 'Which Female Pharaoh Had The Longest Reign?',
+        a: 'Cleopatra',
+        b: 'Nefertiti',
+        c: 'Hatshepsut',
+        d: 'Ashotep',
+        answer: 'c'
+    },
+    {
+        prompt: 'How many paintings were sold by The Vincent Van Gogh in his lifetime?',
+        a: 'none',
+        b: '1',
+        c: '32',
+        d: '98',
+        answer: 'b'
+    }
+]
 
-const questions500000 = []
+const questions500000 = [
+    {
+        prompt: 'Which world leader is famous for his “Little Red Book”?',
+        a: 'Narendra Modi',
+        b: 'Mario Draghi',
+        c: 'Mao Zedong',
+        d: 'Fumio Kishida',
+        answer: 'c'
+    },
+    {
+        prompt: 'How Many U.S. Presidents Have Been Assassinated?',
+        a: 'One',
+        b: 'Two',
+        c: 'Three',
+        d: 'Four',
+        answer: 'd'
+    },
+    {
+        prompt: 'What was the name of the first computer?',
+        a: 'ENIAC',
+        b: 'Obelix',
+        c: 'Generation Macintosh',
+        d: 'TIFRAC',
+        answer: 'a' 
+    }
+]
 
 
 
@@ -241,7 +531,7 @@ const questionsMillion = [
         a: 'Spider',
         b: 'Moth',
         c: 'Roach',
-        d: 'Ant',
+        d: 'fly',
         answer: 'b'
     }
 ]
@@ -251,6 +541,18 @@ getRandomItem(questions100);
 getRandomItem(questions200);
 getRandomItem(questions300);
 getRandomItem(questions500);
+getRandomItem(questions1000);
+getRandomItem(questions2000);
+getRandomItem(questions4000);
+getRandomItem(questions8000);
+getRandomItem(questions15000);
+getRandomItem(questions32000);
+getRandomItem(questions64000);
+getRandomItem(questions125000);
+getRandomItem(questions250000);
+getRandomItem(questions500000);
+getRandomItem(questionsMillion);
+getNextQuestion();
 console.log(questions)
 
 
@@ -259,6 +561,25 @@ getStarted.addEventListener('click', openModal);
 closeBtn.addEventListener("click", closeModal);
 // beginGameBtn.addEventListener('click', startTimerMusic);
 beginGameBtn.addEventListener('click', openGame);
+buttonA.addEventListener('click', (e) => {
+    currentAns = 'a'
+    checkWin(currentAns, currentQuestion)
+  });
+  
+  buttonB.addEventListener('click', (e) => {
+    currentAns = 'b'
+    checkWin(currentAns, currentQuestion)
+  });
+  
+  buttonC.addEventListener('click', (e) => {
+    currentAns = 'c'
+    checkWin(currentAns, currentQuestion)
+  });
+  
+  buttonD.addEventListener('click', (e) => {
+    currentAns = 'd'
+    checkWin(currentAns, currentQuestion)
+  });
 
 
 
