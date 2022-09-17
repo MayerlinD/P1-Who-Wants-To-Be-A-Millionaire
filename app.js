@@ -105,7 +105,7 @@ const questions200 = [
         a: 'Nickels',
         b: 'Teeth',
         c: 'Spoons',
-        d:'Logs',
+        d: 'Logs',
         answer: 'a'
     },
     {
@@ -226,23 +226,23 @@ const questionsMillion = [
         b: 'United Kingdom',
         c: 'The Netherlands',
         d: 'Canada',
-        answer: 'A'
+        answer: 'a'
     },
     {
-        prompt: 'What letter must appear at the beginning of the registration number of all non-military aircraft in the U.S.?',
+        prompt: 'What letter must appear at the beginning of the registration number of all non-military aircrafts in the U.S.?',
         a: 'N',
         b: 'E',
         c: 'D',
         d: 'R',
-        answer: 'A'
+        answer: 'a'
     },
     {
         prompt: 'Which insect shorted out an early supercomputer and inspired the term “computer bug”?',
         a: 'Spider',
         b: 'Moth',
-        c: 'Beetle',
-        d: 'Butterfly',
-        answer: 'B'
+        c: 'Roach',
+        d: 'Ant',
+        answer: 'b'
     }
 ]
 

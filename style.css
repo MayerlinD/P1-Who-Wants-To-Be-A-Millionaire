@@ -88,7 +88,8 @@ body {
     flex-direction: column-reverse;
     position: absolute;
     left: 1200px;
-    background-color: n;
+    background-color: black;
+    opacity: 0.8;
     color: orange;
     font-size: 20px;
     font-family: 'Yeseva One', cursive;
@@ -110,5 +111,14 @@ body {
     display: inline-block;
   }
 
+  .life-lines {
+    border: 3px solid orange;
+    color: rgb(166, 207, 245);
+    border-radius: 100%;
+  }
+
+#phone-friend {
+    background-image: url(https://static.wikia.nocookie.net/millionaire/images/8/88/ClassicPAF.png/revision/latest?cb=20160407180816);
+}
   
 
