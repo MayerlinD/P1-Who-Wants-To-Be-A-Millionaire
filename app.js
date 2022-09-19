@@ -18,9 +18,9 @@ const buttonD = document.querySelector('button.d');
 const countDownClock = document.querySelector(".timer");
 const levelsWon =document.querySelectorAll('.money-won');
 
-let level = -1;
 
-//Questions array
+
+//Global Variables
 const questions = [];
 
 let currentAns = null
@@ -30,6 +30,9 @@ let currentQuestion = questions.shift()
 
 let timeoutId;
 let intervalId;
+
+let level = -1;
+
 
 //Functions
 const openModal = () => {
@@ -123,6 +126,10 @@ const gameOver = () => {
     //         }
     //     }, 1000);
     // }
+
+    const fiftyFifty = () => {
+        
+    }
 
 
 
