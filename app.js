@@ -16,7 +16,11 @@ const buttonB = document.querySelector('button.b');
 const buttonC = document.querySelector('button.c');
 const buttonD = document.querySelector('button.d');
 const countDownClock = document.querySelector(".timer");
-const levelsWon =document.querySelectorAll('.money-won');
+const levelsWon = document.querySelectorAll('.money-won');
+const loseMessage = document.getElementById('loss');
+const phoneFriendMessage = document.getElementById('phoneFriend');
+const phoneFriendBtn = document.querySelector('.phoneAFriend');
+const fiftyFiftyBtn = document.querySelector('.fiftyBtn');
 
 
 
@@ -25,7 +29,8 @@ const questions = [];
 
 let currentAns = null
 
-let currentQuestion = questions.shift()
+let currentQuestion = questions.shift();
+console.log(currentQuestion);
 
 
 let timeoutId;
@@ -37,6 +42,7 @@ let level = -1;
 //Functions
 const openModal = () => {
     modal.style.display = 'block';
+    stopTimerMusic();
 };
 
 const closeModal = () => {
@@ -61,6 +67,7 @@ const getNextQuestion = () => {
 		thinkingAudio.play();
 		thinkingAudio.volume = 0.3;
 	}, 4000);
+    phoneFriendMessage.style.display = 'none';
 };
 
 const checkWin = (ans, ques) => {
@@ -112,8 +119,33 @@ const gameOver = () => {
     stopTimerMusic();
     wrongAnswerAudio.play();
 	wrongAnswerAudio.volume = 0.3;
+    mainGame.style.visibility = 'hidden';
+    levelEl.style.visibility = 'hidden';
+    loseMessage.style.display = 'block';
     setTimeout(location.reload.bind(location), 4000);
-}
+};
+
+const phone = (currentQuestion) => {
+    phoneFriendMessage.style.display = 'block';
+    phoneFriendMessage.innerHTML = `And here I thought you knew everything! The answer is ${questions.currentAns}.`;
+    phoneFriendBtn.style.visibility = 'hidden';
+};
+
+const fittyFitty = (ques) => {
+    let answer = ques.answer
+    let keys = Object.keys(ques)
+    let j = 0
+    while (j < 2) {
+      for (let i = 1; i < keys.length; i++) {
+        if (answer != keys[i] && keys[i] != 'answer' && j < 2) {
+          let a = keys[i]
+          delete ques[a]
+          j++
+        }
+      }
+    }
+    console.log(ques);
+};
 
     // function timer(){
     //     var sec = 15;
@@ -127,9 +159,9 @@ const gameOver = () => {
     //     }, 1000);
     // }
 
-    const fiftyFifty = () => {
-        
-    }
+    // const fiftyFifty () => {
+
+    // }
 
 
 
@@ -587,6 +619,9 @@ buttonA.addEventListener('click', (e) => {
     currentAns = 'd'
     checkWin(currentAns, currentQuestion)
   });
+
+  phoneFriendBtn.addEventListener('click', phone);
+  fiftyFiftyBtn.addEventListener('click', fittyFitty(currentQuestion));
 
 
 

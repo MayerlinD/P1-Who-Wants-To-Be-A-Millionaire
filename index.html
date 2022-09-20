@@ -21,7 +21,7 @@
                     <h2>Welcome to Millionaire,</h2>
                     <p>
                         the ultimate quiz competition! Your goal is to correctly answer a series of 15 questions. Sounds easy enough, right? <br>
-                        <br> Not quite. With every question, the level of difficulty will increase and you will be racing against the clock to answer each question. Each question is worth a specific amount of money; the amounts are not cumulative. If at any time you answer incorrectly, the game is over and your winnings are reduced to $0 for tier-one questions, $1,000 for tier-two questions, and $32,000 for tier-three questions.<br>
+                        <br> Not quite. With every question, the level of difficulty will increase. Each question is worth a specific amount of money; the amounts are not cumulative. If at any time you answer incorrectly, the game is over and your winnings are reduced to $0.<br>
                         <br> Ready to play for your chance at $1,000,000? <br><br>
                         <button class="modalButtons" id="beginGame">Ready!</button>
                     </p>   
@@ -49,8 +49,8 @@
                 </ol>
             </div>
             <div id="life-line-buttons">
-                <button class="life-lines">50/50</button>
-                <button id="phone-friend" class="life-lines"></button>
+                <button id="life-lines" class="fiftyBtn">50/50</button>
+                <button id="life-lines" class="phoneAFriend">Phone Friend</button>
             </div>
             <div>
                 <div id="prompt-container">
@@ -63,6 +63,15 @@
                 </div>
               </div>
         </div>
+        <div>
+            <div id="phoneFriend"> </div>
+        </div>
+        <div>
+            <div id="loss">
+                <h1>You did not become a Millionaire!</h1>
+                <h3>Thanks for playing! Try again!</h3>
+            </div>
+          </div>
     </div>
     <audio id="lets-play" src="https://millionaire-school.netlify.com/sounds/lets_play.mp3"></audio>
 	<audio id="easy" src="https://millionaire-school.netlify.com/sounds/easy.mp3"></audio>
