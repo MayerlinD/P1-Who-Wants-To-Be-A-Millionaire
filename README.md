@@ -11,6 +11,6 @@ Who Wants to Be a Millionaire? is a trivia game show, where the contestant has t
 ### Layout
 The layout of the game is very simple. Questions will appear in the bottom center of the page. The levels indicator is on the right side of the page, while the lifelines are situated on the top left-hand corner. 
 
-<img src="Screen%20Shot%202022-09-20%20at%204.16.14%20PM.png" width="500" height="400"/>
+<img src="Screen%20Shot%202022-09-20%20at%204.16.14%20PM.png" width="800" height="400"/>
 
 
