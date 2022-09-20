@@ -10,7 +10,7 @@ const correctAnswerAudio = document.getElementById('correct-answer');
 const mainGame = document.getElementById('main-game-container');
 const levelEl = document.getElementById('level');
 const promptDisplay = document.querySelector('.prompt');
-const displayEl = document.querySelector('.display');
+// const displayEl = document.querySelector('.display');
 const buttonA = document.querySelector('button.a');
 const buttonB = document.querySelector('button.b');
 const buttonC = document.querySelector('button.c');
@@ -21,6 +21,7 @@ const loseMessage = document.getElementById('loss');
 const phoneFriendMessage = document.getElementById('phoneFriend');
 const phoneFriendBtn = document.querySelector('.phoneAFriend');
 const fiftyFiftyBtn = document.querySelector('.fiftyBtn');
+const winMessage = document.getElementById('win')
 
 
 
@@ -30,8 +31,7 @@ const questions = [];
 let currentAns = null
 
 let currentQuestion = questions.shift();
-console.log(currentQuestion);
-
+let correctAnswers = 0
 
 let timeoutId;
 let intervalId;
@@ -68,6 +68,11 @@ const getNextQuestion = () => {
 		thinkingAudio.volume = 0.3;
 	}, 4000);
     phoneFriendMessage.style.display = 'none';
+
+    buttonA.style.visibility = "visible"
+    buttonB.style.visibility = "visible"
+    buttonC.style.visibility = "visible"
+    buttonD.style.visibility = "visible"
 };
 
 const checkWin = (ans, ques) => {
@@ -75,9 +80,16 @@ const checkWin = (ans, ques) => {
       stopTimerMusic();
 	  correctAnswerAudio.play();
 	  correctAnswerAudio.volume = 0.3;
-      getNextQuestion();
-      level++;
-      levelsWon[level].classList.add('highlight');
+      correctAnswers = correctAnswers + 1
+      if (questions.length == 0 && correctAnswers > 0) {
+        mainGame.style.visibility = 'hidden';
+        winMessage.style.display = 'block';
+        setTimeout(location.reload.bind(location), 4000);
+    } else {
+        getNextQuestion();
+        level++;
+        levelsWon[level].classList.add('highlight');
+    }
     } else {
       gameOver();
     }
@@ -95,6 +107,7 @@ const startTimerMusic = () => {
 };
 
 const openGame = () => {
+    getNextQuestion();
     mainGame.style.visibility = 'visible';
     levelEl.style.visibility = 'visible';
     modal.style.display = 'none';
@@ -125,13 +138,16 @@ const gameOver = () => {
     setTimeout(location.reload.bind(location), 4000);
 };
 
-const phone = (currentQuestion) => {
+
+const phone = (currentQuest) => {
+    console.log(currentQuestion)
     phoneFriendMessage.style.display = 'block';
-    phoneFriendMessage.innerHTML = `And here I thought you knew everything! The answer is ${questions.currentAns}.`;
+    phoneFriendMessage.innerHTML = `And here I thought you knew everything! The answer is ${currentQuestion.answer}.`;
     phoneFriendBtn.style.visibility = 'hidden';
 };
 
-const fittyFitty = (ques) => {
+function fittyFitty(ques) {
+    console.log(`Current question is ${currentQuestion}`);
     let answer = ques.answer
     let keys = Object.keys(ques)
     let j = 0
@@ -145,7 +161,34 @@ const fittyFitty = (ques) => {
       }
     }
     console.log(ques);
-};
+    promptDisplay.innerHTML = ques.prompt
+    console.log(ques.a,ques.b,ques.c)
+
+    if(!ques.a) {
+        console.log(ques.a)
+        buttonA.style.visibility = "hidden"
+    } else {
+        console.log("It")
+    }
+
+    if(!ques.b) {
+        buttonB.style.visibility = "hidden"
+    } else {
+        console.log("It")
+    }
+
+    if(!ques.c) {
+        buttonC.style.visibility = "hidden"
+    } else {
+        console.log("It")
+    }
+
+    if(!ques.d) {
+        buttonD.style.visibility = "hidden"
+    } else {
+        console.log("It")
+    }
+}
 
     // function timer(){
     //     var sec = 15;
@@ -159,9 +202,6 @@ const fittyFitty = (ques) => {
     //     }, 1000);
     // }
 
-    // const fiftyFifty () => {
-
-    // }
 
 
 
@@ -591,14 +631,12 @@ getRandomItem(questions125000);
 getRandomItem(questions250000);
 getRandomItem(questions500000);
 getRandomItem(questionsMillion);
-getNextQuestion();
 console.log(questions)
 
 
 //Event Listeners
 getStarted.addEventListener('click', openModal);
 closeBtn.addEventListener("click", closeModal);
-// beginGameBtn.addEventListener('click', startTimerMusic);
 beginGameBtn.addEventListener('click', openGame);
 buttonA.addEventListener('click', (e) => {
     currentAns = 'a'
@@ -621,7 +659,8 @@ buttonA.addEventListener('click', (e) => {
   });
 
   phoneFriendBtn.addEventListener('click', phone);
-  fiftyFiftyBtn.addEventListener('click', fittyFitty(currentQuestion));
-
+  fiftyFiftyBtn.addEventListener('click', (e) => {
+    fiftyFiftyBtn.style.visibility = 'hidden'
+  })
 
 
