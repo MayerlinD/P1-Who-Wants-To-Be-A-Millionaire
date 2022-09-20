@@ -10,7 +10,6 @@ const correctAnswerAudio = document.getElementById('correct-answer');
 const mainGame = document.getElementById('main-game-container');
 const levelEl = document.getElementById('level');
 const promptDisplay = document.querySelector('.prompt');
-// const displayEl = document.querySelector('.display');
 const buttonA = document.querySelector('button.a');
 const buttonB = document.querySelector('button.b');
 const buttonC = document.querySelector('button.c');
