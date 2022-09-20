@@ -208,26 +208,26 @@ function fittyFitty(ques) {
 const questions100 = [
     {
         prompt: 'According to a popular saying, those facing the consequences of their actions are "paying the" what?',
-        a: 'Meter',
-        b: 'Taxman',
-        c: 'Piper',
-        d: 'Alimony',
+        a: 'A: Meter',
+        b: 'B: Taxman',
+        c: 'C: Piper',
+        d: 'D: Alimony',
         answer: 'c'
     },
     {
         prompt: 'What car company launched the ad slogan "Drivers Wanted" in the 1990s?',
-        a: 'Volkswagen',
-        b: 'Audi',
-        c: 'BMW',
-        d: 'Mercedes',
+        a: 'A: Volkswagen',
+        b: 'B: Audi',
+        c: 'C: BMW',
+        d: 'D: Mercedes',
         answer: 'a'
     },
     {
         prompt: 'Which Disney character famously leaves a glass slipper behind at a royal ball?',
-        a: 'Elsa',
-        b: 'Cinderella',
-        c: 'Snow White',
-        d: 'Sleeping Beauty',
+        a: 'A: Elsa',
+        b: 'B: Cinderella',
+        c: 'C: Snow White',
+        d: 'D: Sleeping Beauty',
         answer: 'b'
     }
 ]
@@ -237,26 +237,26 @@ const questions100 = [
 const questions200 = [
     {
         prompt: 'At the end of a traditional Christian wedding, what does the bride throw to her female guests?',
-        a: 'A handful of rice',
-        b: 'A ring',
-        c: 'A cement block',
-        d: 'A bouquet of flowers',
+        a: 'A: A handful of rice',
+        b: 'B: A ring',
+        c: 'C: A cement block',
+        d: 'D: A bouquet of flowers',
         answer: 'd'
     },
     {
         prompt: "According to a common piece of advice, 'Don't take any wooden' what?",
-        a: 'Nickels',
-        b: 'Teeth',
-        c: 'Spoons',
-        d: 'Logs',
+        a: 'A: Nickels',
+        b: 'B: Teeth',
+        c: 'C: Spoons',
+        d: 'D: Logs',
         answer: 'a'
     },
     {
         prompt: 'What name is given to the revolving belt machinery in an airport that delivers checked luggage from the plane to baggage reclaim?',
-        a: 'Hangar',
-        b: 'Terminal',
-        c: 'Concourse',
-        d: 'Carousel',
+        a: 'A: Hangar',
+        b: 'B: Terminal',
+        c: 'C: Concourse',
+        d: 'D: Carousel',
         answer: 'd'
     }
 ]
@@ -264,26 +264,26 @@ const questions200 = [
 const questions300 = [
     {
         prompt: 'Which of these expressions refers to a tall tale or unbelievable story?',
-        a: 'Cock & bull',
-        b: 'Bull & bear',
-        c: 'Cat & dog',
-        d: 'Giraffe & emu',
+        a: 'A: Cock & bull',
+        b: 'B: Bull & bear',
+        c: 'C: Cat & dog',
+        d: 'D: Giraffe & emu',
         answer: 'a'
     },
     {
         prompt: 'Which of these types of footwear are usually at least 25 inches long and up to 12 inches wide?',
-        a: 'In-line skates',
-        b: 'Hiking boots',
-        c: 'Galoshes',
-        d: 'Snowshoes',
+        a: 'A: In-line skates',
+        b: 'B: Hiking boots',
+        c: 'C: Galoshes',
+        d: 'D: Snowshoes',
         answer: 'd'
     },
     {
         prompt: 'According to a popular phrase, if things are going well for you, "the world is your" what?',
-        a: 'Anenome',
-        b: 'Mussel',
-        c: 'Oyster',
-        d: 'Shrimp',
+        a: 'A: Anenome',
+        b: 'B: Mussel',
+        c: 'C: Oyster',
+        d: 'D: Shrimp',
         answer: 'c'
     }
 ]
@@ -291,26 +291,26 @@ const questions300 = [
 questions500 = [
     {
         prompt: 'Longtime pals Matt Damon and Ben Affleck attended highschool together in a suburb of what city?',
-        a: 'Atlanta',
-        b: 'Chicago',
-        c: 'Detroit',
-        d: 'Boston',
+        a: 'A: Atlanta',
+        b: 'B: Chicago',
+        c: 'C: Detroit',
+        d: 'D: Boston',
         answer: 'd'
     },
     {
         prompt: 'Which of these birds has the biggest brain relative to its size?',
-        a: 'Ostrich',
-        b: 'Hummingbird',
-        c: 'Sparrow',
-        d: 'Eagle',
+        a: 'A: Ostrich',
+        b: 'B: Hummingbird',
+        c: 'C: Sparrow',
+        d: 'D: Eagle',
         answer: 'b'
     },
     {
         prompt: 'Nadia Comaneci was the first gymnast to ever do what at the Olympics?',
-        a: 'Get a perfect 10',
-        b: 'Finish with a broken ankle',
-        c: 'Win an Olympic gold medal',
-        d: 'Forfeit her position',
+        a: 'A: Get a perfect 10',
+        b: 'B: Finish with a broken ankle',
+        c: 'C: Win an Olympic gold medal',
+        d: 'D: Forfeit her position',
         answer: 'a'
     }
 ]
@@ -318,26 +318,26 @@ questions500 = [
 const questions1000 = [
     {
         prompt: 'The hammer and sickle is one of the most recognisable symbols of which political ideology?',
-        a: 'Communism',
-        b: 'Socialism',
-        c: 'Capitalism',
-        d: 'Conservatism',
+        a: 'A: Communism',
+        b: 'B: Socialism',
+        c: 'C: Capitalism',
+        d: 'D: Conservatism',
         answer: 'a'
     },
     {
         prompt: 'In the title of a 1982 song, the group Culture Club asks, "Do You Really Want To" what?',
-        a: 'Dance',
-        b: 'Hurt Me',
-        c: 'Break My Heart',
-        d: 'Wear That Dress',
+        a: 'A: Dance',
+        b: 'B: Hurt Me',
+        c: 'C: Break My Heart',
+        d: 'D: Wear That Dress',
         answer: 'b'
     },
     {
         prompt: 'In the 1960s, young idealists were often given what nickname?',
-        a: 'Flower children',
-        b: 'Promise keepers',
-        c: 'Happy hobos',
-        d: 'Tree huggers',
+        a: 'A: Flower children',
+        b: 'B: Promise keepers',
+        c: 'C: Happy hobos',
+        d: 'D: Tree huggers',
         answer: 'a'
     }
 ]
@@ -345,26 +345,26 @@ const questions1000 = [
 const questions2000 = [
     {
         prompt: 'What colour were the Pyramids of Giza originally?',
-        a: 'white',
-        b: 'brown',
-        c: 'orange',
-        d: 'gold',
+        a: 'A: white',
+        b: 'B: brown',
+        c: 'C: orange',
+        d: 'D: gold',
         answer: 'a'
     },
     {
         prompt: 'According to Greek Mythology who was the first woman on Earth',
-        a: 'Hera',
-        b: 'Pandora',
-        c: 'Aphrodite',
-        d: 'Persephone',
+        a: 'A: Hera',
+        b: 'B: Pandora',
+        c: 'C: Aphrodite',
+        d: 'D: Persephone',
         answer: 'b'
     },
     {
         prompt: 'Which country consumes the most chocolate per capita?',
-        a: 'USA',
-        b: 'Switzerland',
-        c: 'France',
-        d: 'Belgium',
+        a: 'A: USA',
+        b: 'B: Switzerland',
+        c: 'C: France',
+        d: 'D: Belgium',
         answer: 'b'
     }
 ]
@@ -372,26 +372,26 @@ const questions2000 = [
 const questions4000 = [
     {
         prompt: "Which two U.S. states don’t observe Daylight Savings Time?",
-        a: 'Alaska & Kentucky',
-        b: 'Florida & Michigan',
-        c: 'Alaska & Hawaii',
-        d: 'Arizona & Hawaii',
+        a: 'A: Alaska & Kentucky',
+        b: 'B: Florida & Michigan',
+        c: 'C: Alaska & Hawaii',
+        d: 'D: Arizona & Hawaii',
         answer: 'd'
     },
     {
         prompt: "About how many taste buds does the average human tongue have?",
-        a: '10,000',
-        b: '7,000',
-        c: '18,000',
-        d: '22,000',
+        a: 'A: 10,000',
+        b: 'B: 7,000',
+        c: 'C: 18,000',
+        d: 'D: 22,000',
         answer: 'a'
     },
     {
         prompt: 'Which country produces the most coffee in the world?',
-        a: 'Colombia',
-        b: 'Israel',
-        c: 'Brazil',
-        d: 'Italy',
+        a: 'A: Colombia',
+        b: 'B: Israel',
+        c: 'C: Brazil',
+        d: 'D: Italy',
         answer: 'c'
     }
 ]
@@ -399,26 +399,26 @@ const questions4000 = [
 const questions8000 = [
     {
         prompt: "Which Of Shakespeare’s Plays Is The Longest?",
-        a: 'Hamlet',
-        b: 'Macbeth',
-        c: 'Romeo & Juliet',
-        d: 'Othello',
+        a: 'A: Hamlet',
+        b: 'B: Macbeth',
+        c: 'C: Romeo & Juliet',
+        d: 'D: Othello',
         answer: 'a'
     },
     {
         prompt: 'Which mammal has no vocal cords?',
-        a: 'Bats',
-        b: 'Giraffes',
-        c: 'Kangaroos',
-        d: 'Otters',
+        a: 'A: Bats',
+        b: 'B: Giraffes',
+        c: 'C: Kangaroos',
+        d: 'D: Otters',
         answer: 'b'
     },
     {
         prompt: 'What does M&M stand for?',
-        a: 'Mary & Mark',
-        b: 'Mifflin & Mars',
-        c: 'Mars & Murrie',
-        d: 'Maddy & May',
+        a: 'A: Mary & Mark',
+        b: 'B: Mifflin & Mars',
+        c: 'C: Mars & Murrie',
+        d: 'D: Maddy & May',
         answer: 'c'
     }
 ]
@@ -426,26 +426,26 @@ const questions8000 = [
 const questions15000 = [
     {
         prompt: 'Who was the shortest player ever to play in the NBA?',
-        a: 'Tyrone Bogues',
-        b: 'Keith Jennings',
-        c: 'Spud Webb',
-        d: 'Mel Hirsch',
+        a: 'A: Tyrone Bogues',
+        b: 'B: Keith Jennings',
+        c: 'C: Spud Webb',
+        d: 'D: Mel Hirsch',
         answer: 'a'
     },
     {
         prompt: 'Approximately, how many grapes are needed for only one bottle of wine?',
-        a: '400',
-        b: '1200',
-        c: '2,000',
-        d: '700',
+        a: 'A: 400',
+        b: 'B: 1200',
+        c: 'C: 2,000',
+        d: 'D: 700',
         answer: 'd'
     },
     {
         prompt: 'Where on the human body is the Zygomatic bone found?',
-        a: 'Calf',
-        b: 'Cheek',
-        c: 'Ankle',
-        d: 'Hip',
+        a: 'A: Calf',
+        b: 'B: Cheek',
+        c: 'C: Ankle',
+        d: 'D: Hip',
         answer: 'b'
     }
 ]
@@ -453,26 +453,26 @@ const questions15000 = [
 const questions32000 = [
     {
         prompt: 'How many bricks is the Empire State Building made of?',
-        a: '10 million',
-        b: '14 million',
-        c: '5 million',
-        d: '18 million',
+        a: 'A: 10 million',
+        b: 'B: 14 million',
+        c: 'C: 5 million',
+        d: 'D: 18 million',
         answer: 'a'
     },
     {
         prompt: "Which singer’s real name is Stefani Joanne Angelina Germanotta?",
-        a: 'Madonna',
-        b: 'Nicki Minaj',
-        c: 'Lady Gaga',
-        d: 'Fergie',
+        a: 'A: Madonna',
+        b: 'B: Nicki Minaj',
+        c: 'C: Lady Gaga',
+        d: 'D: Fergie',
         answer: 'c'
     },
     {
         prompt: 'What is the loudest animal on Earth?',
-        a: 'African elephant',
-        b: 'Sperm whale',
-        c: 'Lion',
-        d: 'Humpback whale',
+        a: 'A: African elephant',
+        b: 'B: Sperm whale',
+        c: 'C: Lion',
+        d: 'D: Humpback whale',
         answer: 'b'
     }
 ]
@@ -480,26 +480,26 @@ const questions32000 = [
 const questions64000 = [
     {
         prompt: 'What is the national animal of Scotland?',
-        a: 'Puffin',
-        b: 'Loch Ness Monster',
-        c: 'Sheep',
-        d: 'Unicorn',
+        a: 'A: Puffin',
+        b: 'B: Loch Ness Monster',
+        c: 'C: Sheep',
+        d: 'D: Unicorn',
         answer: 'd'
     },
     {
         prompt: "Who is People Magazine’s Sexiest Man Alive in 1989?",
-        a: 'Richard Gere',
-        b: 'Sean Connery',
-        c: 'Tom Cruise',
-        d: 'Liam Neeson',
+        a: 'A: Richard Gere',
+        b: 'B: Sean Connery',
+        c: 'C: Tom Cruise',
+        d: 'D: Liam Neeson',
         answer: 'b'
     },
     {
         prompt: 'What was the first toy to be advertised on television?',
-        a: 'Mr. Potato Head',
-        b: 'yo-yo',
-        c: 'slinky',
-        d: 'Barbie',
+        a: 'A: Mr. Potato Head',
+        b: 'B: yo-yo',
+        c: 'C: slinky',
+        d: 'D: Barbie',
         answer: 'a'
     }
 ]
@@ -507,26 +507,26 @@ const questions64000 = [
 const questions125000 = [
     {
         prompt: 'The fear of number 13 is called what?',
-        a: 'Triskaidekaphobia',
-        b: 'Bathmophobia',
-        c: 'Chronomentrophobia',
-        d: 'Verminophobia',
+        a: 'A: Triskaidekaphobia',
+        b: 'B: Bathmophobia',
+        c: 'C: Chronomentrophobia',
+        d: 'D: Verminophobia',
         answer: 'a'
     },
     {
         prompt: 'Which continent has hosted The Olympics the most times?',
-        a: 'North America',
-        b: 'Europe',
-        c: 'Africa',
-        d: 'Asia',
+        a: 'A: North America',
+        b: 'B: Europe',
+        c: 'C: Africa',
+        d: 'D: Asia',
         answer: 'b'
     },
     {
         prompt: "What is the world’s most venomous fish?",
-        a: 'Puffer fish',
-        b: 'Tigerfish',
-        c: 'Stonefish',
-        d: 'Red Lionfish',
+        a: 'A: Puffer fish',
+        b: 'B: Tigerfish',
+        c: 'C: Stonefish',
+        d: 'D: Red Lionfish',
         answer: 'c'
     }
 ]
@@ -534,26 +534,26 @@ const questions125000 = [
 const questions250000 = [
     {
         prompt: 'In the human body, what is the Hallux?',
-        a: 'Thumb',
-        b: 'Elbow',
-        c: 'Big Toe',
-        d: 'Knuckle',
+        a: 'A: Thumb',
+        b: 'B: Elbow',
+        c: 'C: Big Toe',
+        d: 'D: Knuckle',
         answer: 'c'
     },
     {
         prompt: 'Which Female Pharaoh Had The Longest Reign?',
-        a: 'Cleopatra',
-        b: 'Nefertiti',
-        c: 'Hatshepsut',
-        d: 'Ashotep',
+        a: 'A: Cleopatra',
+        b: 'B: Nefertiti',
+        c: 'C: Hatshepsut',
+        d: 'D: Ashotep',
         answer: 'c'
     },
     {
         prompt: 'How many paintings were sold by The Vincent Van Gogh in his lifetime?',
-        a: 'none',
-        b: '1',
-        c: '32',
-        d: '98',
+        a: 'A: none',
+        b: 'B: 1',
+        c: 'C: 32',
+        d: 'D: 98',
         answer: 'b'
     }
 ]
@@ -561,26 +561,26 @@ const questions250000 = [
 const questions500000 = [
     {
         prompt: 'Which world leader is famous for his “Little Red Book”?',
-        a: 'Narendra Modi',
-        b: 'Mario Draghi',
-        c: 'Mao Zedong',
-        d: 'Fumio Kishida',
+        a: 'A: Narendra Modi',
+        b: 'B: Mario Draghi',
+        c: 'C: Mao Zedong',
+        d: 'D: Fumio Kishida',
         answer: 'c'
     },
     {
         prompt: 'How Many U.S. Presidents Have Been Assassinated?',
-        a: 'One',
-        b: 'Two',
-        c: 'Three',
-        d: 'Four',
+        a: 'A: One',
+        b: 'B: Two',
+        c: 'C: Three',
+        d: 'D: Four',
         answer: 'd'
     },
     {
         prompt: 'What was the name of the first computer?',
-        a: 'ENIAC',
-        b: 'Obelix',
-        c: 'Generation Macintosh',
-        d: 'TIFRAC',
+        a: 'A: ENIAC',
+        b: 'B: Obelix',
+        c: 'C: Generation Macintosh',
+        d: 'D: TIFRAC',
         answer: 'a' 
     }
 ]
@@ -590,26 +590,26 @@ const questions500000 = [
 const questionsMillion = [
     {
         prompt: "In the children’s book series, where is Paddington Bear originally from?",
-        a: 'Peru',
-        b: 'United Kingdom',
-        c: 'The Netherlands',
-        d: 'Canada',
+        a: 'A: Peru',
+        b: 'B: United Kingdom',
+        c: 'C: The Netherlands',
+        d: 'D: Canada',
         answer: 'a'
     },
     {
         prompt: 'What letter must appear at the beginning of the registration number of all non-military aircrafts in the U.S.?',
-        a: 'N',
-        b: 'E',
-        c: 'D',
-        d: 'R',
+        a: 'A: N',
+        b: 'B: E',
+        c: 'C: D',
+        d: 'D: R',
         answer: 'a'
     },
     {
         prompt: 'Which insect shorted out an early supercomputer and inspired the term “computer bug”?',
-        a: 'Spider',
-        b: 'Moth',
-        c: 'Roach',
-        d: 'fly',
+        a: 'A: Spider',
+        b: 'B: Moth',
+        c: 'C: Roach',
+        d: 'D: fly',
         answer: 'b'
     }
 ]

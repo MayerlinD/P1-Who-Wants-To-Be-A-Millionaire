@@ -115,12 +115,17 @@ body {
 
   #life-lines {
     border: 3px solid orange;
-    height: 80px;
+    height: 100px;
     width: 100px;
     background-color: rgb(13, 58, 100);
     color: orange;
     border-radius: 100%;
     font-weight: bold;
+  }
+
+  #life-lines:hover {
+    background-color: orange;
+    color: rgb(13, 58, 100);
   }
 
 #phoneFriend {
