@@ -13,4 +13,20 @@ The layout of the game is very simple. Questions will appear in the bottom cente
 
 <img src="Screen%20Shot%202022-09-20%20at%204.16.14%20PM.png" width="800" height="400"/>
 
+### Technologies Used & Features
+_Technologies_
+Created with **JavaScript**
 
+_Features_
+Some Features I have implemented in my game are the life lines. The 50/50 feature, hides two incorrect answers, leaving the player with one incorrect answer and the correct answer to choose from. 
+
+<img src="Screen%20Shot%202022-09-20%20at%206.09.10%20PM.png" width="800" height="400"/>
+
+When the player clicks "Phone A Friend", A box appears with a message from the player's "friend", giving them the correct answer. This feature is one I would like to develop further in the future. 
+
+<img src="Screen%20Shot%202022-09-20%20at%206.10.19%20PM.png" width="800" height="400"/>
+
+Lastly, The music throughout the game is an added feature that I liked implementing in my game. In the future I would like to add the option to turn it off entirely.
+
+*** Acknowledgements
+I would like to thank my loved ones continued support throughout this journey so far and my instructors for being patient with all of my questions and getting me out of the panic zone countless times.
