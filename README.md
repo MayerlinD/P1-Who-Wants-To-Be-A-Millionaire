@@ -28,5 +28,5 @@ When the player clicks "Phone A Friend", A box appears with a message from the p
 
 Lastly, The music throughout the game is an added feature that I liked implementing in my game. In the future I would like to add the option to turn it off entirely.
 
-*** Acknowledgements
+### Acknowledgements
 I would like to thank my loved ones continued support throughout this journey so far and my instructors for being patient with all of my questions and getting me out of the panic zone countless times.
