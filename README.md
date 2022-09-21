@@ -26,7 +26,9 @@ When the player clicks "Phone A Friend", A box appears with a message from the p
 
 <img src="Screen%20Shot%202022-09-20%20at%206.10.19%20PM.png" width="800" height="400"/>
 
-Lastly, The music throughout the game is an added feature that I liked implementing in my game. In the future I would like to add the option to turn it off entirely.
+The music throughout the game is an added feature that I liked implementing in my game. In the future I would like to add the option to turn it off entirely.
+
+Originally, I wanted each question to be timed. Due to issues with resetting the timer after each question, I had to leave this feature out. In the future, adding the timer will be one of my goals to implement.
 
 ### Acknowledgements
 I would like to thank my loved ones continued support throughout this journey so far and my instructors for being patient with all of my questions and getting me out of the panic zone countless times.
